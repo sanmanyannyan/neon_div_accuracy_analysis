@@ -87,21 +87,21 @@ int main(int argc,char *argv[]){
 			max_reldif = reldif;
 			true_val = destO[i + 1];
 			est_val = destE[i + 1];
-			maxIdx = i;
+			maxIdx = i + 1;
 		}
 		reldif = fabs((destE[i + 2] - destO[i + 2]) / destO[i + 2]);
 		if( reldif > max_reldif ){
 			max_reldif = reldif;
 			true_val = destO[i + 2];
 			est_val = destE[i + 2];
-			maxIdx = i;
+			maxIdx = i + 2;
 		}
 		reldif = fabs((destE[i + 3] - destO[i + 3]) / destO[i + 3]);
 		if( reldif > max_reldif ){
 			max_reldif = reldif;
 			true_val = destO[i + 3];
 			est_val = destE[i + 3];
-			maxIdx = i;
+			maxIdx = i + 3;
 		}
 	}
 	printf("max relative difference:%f\n",max_reldif);
